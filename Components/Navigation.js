@@ -37,6 +37,7 @@ function MyTabs() {
           paddingBottom: 10,
           padding: 10,
           fontWeight: "bold",
+          justifyContent: "space-evenly",
         },
       })}
     >
@@ -51,7 +52,7 @@ function MyTabs() {
           title: "Profile",
           headerStyle: {
             backgroundColor: "white",
-            height: 80, // Adjust the height of the header
+            height: 40, // Adjust the height of the header
           },
           headerTintColor: "black",
           headerTitleStyle: {

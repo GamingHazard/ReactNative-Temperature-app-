@@ -8,7 +8,7 @@ import Welcome from "./Screens/Welcome";
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar hidden={true} />
       <Navigation />
     </View>
   );

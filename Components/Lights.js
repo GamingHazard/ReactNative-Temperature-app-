@@ -165,10 +165,9 @@ const Lights = () => {
             </View>
             <View
               style={{
-                padding: 10,
-                width: "30%",
-                // backgroundColor: "lightblue",
-                height: 60,
+                padding: 2,
+                width: "40%",
+
                 alignItems: "center",
                 justifyContent: "space-evenly",
                 flexDirection: "row",
@@ -198,11 +197,8 @@ const Lights = () => {
       <View
         style={{
           width: "100%",
-          height: 100,
           padding: 10,
           backgroundColor: "white",
-          marginVertical: 40,
-
           elevation: 10,
           borderRadius: 10,
         }}
@@ -288,5 +284,5 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
-  switch: { width: 50, transform: [{ scaleX: 1.8 }, { scaleY: 1.8 }] },
+  switch: { width: 50, transform: [{ scaleX: 1.2 }, { scaleY: 1.2 }] },
 });

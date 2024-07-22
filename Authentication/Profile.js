@@ -7,6 +7,7 @@ import {
   ScrollView,
   Modal,
   Switch,
+  Image,
 } from "react-native";
 import React, { useState } from "react";
 import { CheckBox } from "react-native-elements";
@@ -56,18 +57,21 @@ const Profile = () => {
           }}
         >
           {/* Profile Image container */}
-          <View
-            style={{
-              width: 200,
-              height: 200,
-              backgroundColor: "white",
-              borderRadius: 100,
-              padding: 10,
-              alignItems: "center",
-              justifyContent: "center",
-              marginVertical: 20,
-            }}
-          ></View>
+          <View>
+            <Image
+              style={{
+                width: 100,
+                height: 100,
+                backgroundColor: "white",
+                borderRadius: 100,
+
+                alignItems: "center",
+                justifyContent: "center",
+                marginVertical: 5,
+              }}
+              source={require("../assets/profile.jpg")}
+            />
+          </View>
           <Text style={{ color: "white", fontSize: 30 }}>Users Name</Text>
 
           {/* Profile Edit and Logout Buttons */}
@@ -87,7 +91,9 @@ const Profile = () => {
         <View style={styles.tabContainer}>
           {/* Device Tab */}
           <View style={styles.tab}>
-            <Text style={styles.tabTitle}>Devices</Text>
+            <Text style={{ fontWeight: "bold", fontSize: 18, top: -28 }}>
+              Devices
+            </Text>
             <View
               style={{ flexDirection: "row", justifyContent: "space-evenly" }}
             >
@@ -204,7 +210,7 @@ const Profile = () => {
             />
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-                <Text style={{ color: "white" }}>Submit</Text>
+                <Text style={{ color: "white" }}>Change</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.button} onPress={handleClose}>
                 <Text style={{ color: "white" }}>Close</Text>
