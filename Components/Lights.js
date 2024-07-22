@@ -93,7 +93,7 @@ const Lights = () => {
             fontFamily: "monospace",
           }}
         >
-          Control all Lights
+          All Lights
         </Text>
         <Switch
           trackColor={{ false: "lightgrey", true: "lightblue" }}
@@ -288,5 +288,5 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
-  switch: { width: 50, transform: [{ scaleX: 2 }, { scaleY: 2 }] },
+  switch: { width: 50, transform: [{ scaleX: 1.8 }, { scaleY: 1.8 }] },
 });

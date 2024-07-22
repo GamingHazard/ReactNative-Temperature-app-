@@ -212,7 +212,9 @@ const LivingRoomPage = () => {
           </View>
 
           <View>
-            <Text style={{ fontSize: 20 }}>it will save energy and money</Text>
+            <Text style={{ fontSize: 20, marginVertical: 10 }}>
+              it will save energy and money
+            </Text>
           </View>
         </View>
       </View>

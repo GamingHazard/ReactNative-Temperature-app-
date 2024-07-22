@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Modal,
+  Switch,
 } from "react-native";
 import React, { useState } from "react";
 import { CheckBox } from "react-native-elements";
@@ -17,6 +18,11 @@ const Profile = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [MainSwitch, setMainSwitch] = useState(false);
+
+  // function for the main switch
+  const toggleMainSwitch = () =>
+    setMainSwitch((previousState) => !previousState);
 
   const handleEdit = () => {
     setIsEditFormVisible(true);
@@ -124,6 +130,47 @@ const Profile = () => {
             <Text style={styles.tabTitle}>Automation Hour Setting</Text>
             <TimeSet />
           </View>
+
+          {/* Main Swich */}
+
+          <View
+            style={{
+              width: "100%",
+              height: 100,
+              padding: 10,
+              backgroundColor: "whitesmoke",
+              borderBottomRightRadius: 10,
+              borderBottomLeftRadius: 10,
+            }}
+          >
+            <View style={{ flexDirection: "row", padding: 5 }}>
+              <Text
+                style={{ fontWeight: "bold", fontSize: 18, top: -10, flex: 1 }}
+              >
+                Main Switch
+              </Text>
+              <Text style={{ top: -10, fontSize: 16, fontWeight: "bold" }}>
+                {MainSwitch ? "On" : "Off"}
+              </Text>
+            </View>
+            <View
+              style={{ flexDirection: "row", justifyContent: "space-evenly" }}
+            >
+              <Text style={{ fontSize: 16, flex: 1 }}>
+                Turns OFF/ON all devices in the house
+              </Text>
+
+              {/* Auto Switch for activating automatic mode */}
+              <Switch
+                trackColor={{ false: "#767577", true: "lightblue" }}
+                thumbColor={MainSwitch ? "royalblue" : "#f4f3f4"}
+                ios_backgroundColor="#3e3e3e"
+                onValueChange={toggleMainSwitch}
+                value={MainSwitch}
+                style={styles.switch}
+              />
+            </View>
+          </View>
         </View>
       </ScrollView>
 
@@ -195,7 +242,7 @@ const styles = StyleSheet.create({
   tabContainer: {
     backgroundColor: "white",
     width: 340,
-    height: 350,
+    height: 470,
     alignSelf: "center",
     top: -100,
     elevation: 10,
@@ -244,5 +291,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "whitesmoke",
     marginBottom: 10,
+  },
+  switch: {
+    width: 60,
+    transform: [{ scaleX: 1.8 }, { scaleY: 1.8 }],
+    top: -10,
+    left: -12,
   },
 });
