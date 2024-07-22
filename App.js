@@ -10,6 +10,9 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar hidden={true} />
       <Navigation />
+      {/* <Welcome /> */}
+      {/* <LoginForm /> */}
+      {/* <RegistrationForm /> */}
     </View>
   );
 }

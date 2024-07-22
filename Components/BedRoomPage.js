@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, Switch, Alert } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Switch,
+  Alert,
+  ScrollView,
+} from "react-native";
 import React, { useState } from "react";
 import { FontAwesome6 } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
@@ -70,7 +77,7 @@ const BedRoomPage = () => {
     // Add your task logic here
   };
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1, paddingHorizontal: 10 }}>
       {/* Slider to control Temperature */}
       <SliderBar
         initialTemperature={22}
@@ -108,28 +115,31 @@ const BedRoomPage = () => {
               padding: 10,
               elevation: 10,
               alignItems: "center",
+              marginHorizontal: 10,
             }}
           >
-            <Text>AC 1</Text>
+            <Text style={{ fontSize: 16 }}>AC 1</Text>
           </View>
 
           {/* Switch to power On The Devices */}
           <View
             style={{
-              width: "40%",
               height: 50,
               borderRadius: 30,
               backgroundColor: "whitesmoke",
-              justifyContent: "center",
+              justifyContent: "space-evenly",
               padding: 15,
               elevation: 10,
               flexDirection: "row",
+              flex: 1,
             }}
           >
-            <Text style={{ flex: 1 }}>Turn : {PowerSwitch ? "On" : "Off"}</Text>
+            <Text style={{ flex: 1, fontWeight: "bold", fontSize: 16 }}>
+              Power: {PowerSwitch ? "On" : "Off"}
+            </Text>
             <Switch
               trackColor={{ false: "lightgrey", true: "#17153B" }}
-              thumbColor={PowerSwitch ? "green" : "#f4f3f4"}
+              thumbColor={PowerSwitch ? "#e9cdb3" : "#f4f3f4"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={togglePowerSwitch}
               value={PowerSwitch}
@@ -203,7 +213,7 @@ const BedRoomPage = () => {
             {/* Auto Switch for activating automatic mode */}
             <Switch
               trackColor={{ false: "#767577", true: "#17153B" }}
-              thumbColor={AutoSwictch ? "green" : "#f4f3f4"}
+              thumbColor={AutoSwictch ? "#e9cdb3" : "#f4f3f4"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleAutoSwitch}
               value={AutoSwictch}
@@ -217,7 +227,7 @@ const BedRoomPage = () => {
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

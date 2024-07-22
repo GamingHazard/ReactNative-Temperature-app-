@@ -6,6 +6,7 @@ import SliderBar from "./Slider";
 import Icon from "react-native-vector-icons/FontAwesome";
 import MaterialIcon from "react-native-vector-icons/MaterialIcons";
 import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
+import { ScrollView } from "react-native";
 
 const LivingRoomPage = () => {
   const [temperature, setTemperature] = useState(10);
@@ -70,7 +71,7 @@ const LivingRoomPage = () => {
     // Add your task logic here
   };
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1, paddingHorizontal: 10 }}>
       {/* Slider to control Temperature */}
       <SliderBar
         initialTemperature={22}
@@ -108,6 +109,7 @@ const LivingRoomPage = () => {
               padding: 10,
               elevation: 10,
               alignItems: "center",
+              marginHorizontal: 10,
             }}
           >
             <Text>AC 1</Text>
@@ -116,20 +118,22 @@ const LivingRoomPage = () => {
           {/* Switch to Turn On The Devices */}
           <View
             style={{
-              width: "40%",
               height: 50,
               borderRadius: 30,
               backgroundColor: "whitesmoke",
-              justifyContent: "center",
+              justifyContent: "space-evenly",
               padding: 15,
               elevation: 10,
               flexDirection: "row",
+              flex: 1,
             }}
           >
-            <Text style={{ flex: 1 }}>Turn : {PowerSwitch ? "On" : "Off"}</Text>
+            <Text style={{ flex: 1, fontWeight: "bold", fontSize: 16 }}>
+              Power: {PowerSwitch ? "On" : "Off"}
+            </Text>
             <Switch
-              trackColor={{ false: "lightgrey", true: "lightblue" }}
-              thumbColor={PowerSwitch ? "royalblue" : "#f4f3f4"}
+              trackColor={{ false: "lightgrey", true: "#17153B" }}
+              thumbColor={PowerSwitch ? "#e9cdb3" : "#f4f3f4"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={togglePowerSwitch}
               value={PowerSwitch}
@@ -203,8 +207,8 @@ const LivingRoomPage = () => {
 
             {/* Auto Switch used for activating automatic mode */}
             <Switch
-              trackColor={{ false: "lightgrey", true: "lightblue" }}
-              thumbColor={AutoSwictch ? "royalblue" : "#f4f3f4"}
+              trackColor={{ false: "lightgrey", true: "#070945" }}
+              thumbColor={AutoSwictch ? "#e9cdb3" : "#f4f3f4"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleAutoSwitch}
               value={AutoSwictch}
@@ -218,7 +222,7 @@ const LivingRoomPage = () => {
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

@@ -18,7 +18,7 @@ const AcIcons = ({ num }) => {
           color="white"
         />
       </TouchableOpacity>
-      <Text style={{ alignSelf: "center", color: "white" }}>AC {num}</Text>
+      <Text style={{ alignSelf: "center", color: "#e9cdb3" }}>AC {num}</Text>
     </View>
   );
 };

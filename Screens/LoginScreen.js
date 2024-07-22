@@ -66,12 +66,12 @@ const LoginForm = ({ navigation }) => {
               alignSelf: "center",
             }}
           >
-            <Text style={{ color: "white", fontSize: 20 }}>
+            <Text style={{ color: "white", fontSize: 16 }}>
               Don't have an account ?
             </Text>
             <Pressable onPress={() => navigation.navigate("Register")}>
               <Text
-                style={{ color: "white", marginHorizontal: 20, fontSize: 20 }}
+                style={{ color: "white", marginHorizontal: 20, fontSize: 16 }}
               >
                 Register
               </Text>
@@ -88,14 +88,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 16,
-    backgroundColor: "#17153B",
+    backgroundColor: "#070945",
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
     textAlign: "center",
-    color: "white",
+    color: "#e9cdb3",
   },
   input: {
     height: 50,
@@ -109,15 +109,15 @@ const styles = StyleSheet.create({
     backgroundColor: "whitesmoke",
   },
   button: {
-    backgroundColor: "#536493",
-    paddingVertical: 15,
+    backgroundColor: "#e9cdb3",
+    padding: 10,
     borderRadius: 5,
     alignItems: "center",
     width: 100,
     alignSelf: "center",
   },
   buttonText: {
-    color: "white",
+    color: "#070945",
     fontSize: 18,
   },
 });

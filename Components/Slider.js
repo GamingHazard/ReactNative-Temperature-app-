@@ -54,9 +54,9 @@ const SliderBar = ({ initialTemperature, onSetTemperature }) => {
         style={styles.slider}
         minimumValue={10}
         maximumValue={30}
-        minimumTrackTintColor="#17153B"
-        maximumTrackTintColor="#17153B"
-        thumbTintColor="#17153B"
+        minimumTrackTintColor="#070945"
+        maximumTrackTintColor="#070945"
+        thumbTintColor="#070945"
         value={temperature}
         onValueChange={(value) => setTemperature(value)}
       />
@@ -68,7 +68,7 @@ const SliderBar = ({ initialTemperature, onSetTemperature }) => {
           padding: 10,
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#17153B",
+          backgroundColor: "#070945",
           alignSelf: "center",
           borderRadius: 10,
         }}
@@ -85,14 +85,14 @@ export default SliderBar;
 const styles = StyleSheet.create({
   container: {},
   text: {
-    fontSize: 60,
+    fontSize: 40,
     alignSelf: "center",
     fontWeight: "bold",
   },
   slider: {
-    width: 370,
+    width: "90%",
     height: 50,
     marginBottom: 20,
-    marginHorizontal: 20,
+    alignSelf: "center",
   },
 });

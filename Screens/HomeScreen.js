@@ -22,7 +22,7 @@ const HomeScreen = ({ navigation }) => {
             height: 380,
             width: "100%",
             padding: 8,
-            backgroundColor: "#17153B",
+            backgroundColor: "#070945",
           }}
         >
           <View
@@ -50,7 +50,7 @@ const HomeScreen = ({ navigation }) => {
                   color="white"
                 />
               </TouchableOpacity>
-              <Text style={{ alignSelf: "center", color: "white" }}>
+              <Text style={{ alignSelf: "center", color: "#e9cdb3" }}>
                 Lights
               </Text>
             </View>
@@ -94,9 +94,13 @@ const HomeScreen = ({ navigation }) => {
             }}
           >
             {/* User Name saved on Registration */}
-            <Text style={{ fontSize: 20, color: "#7D8ABC" }}>HELLO , JOEL</Text>
+            <Text style={{ fontSize: 20, color: "#7D8ABC" }}>
+              HELLO , USER NAME
+            </Text>
 
-            <Text style={{ fontSize: 30, color: "white", marginVertical: 15 }}>
+            <Text
+              style={{ fontSize: 30, color: "#e9cdb3", marginVertical: 15 }}
+            >
               CONNECTED {"\n"} {"  "}DEVICES
             </Text>
           </View>

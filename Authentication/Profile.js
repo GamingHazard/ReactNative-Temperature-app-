@@ -49,7 +49,7 @@ const Profile = () => {
           style={{
             width: "100%",
             height: 450,
-            backgroundColor: "#17153B",
+            backgroundColor: "#070945",
             padding: 10,
             alignItems: "center",
             borderBottomRightRadius: 30,
@@ -72,17 +72,19 @@ const Profile = () => {
               source={require("../assets/profile.jpg")}
             />
           </View>
-          <Text style={{ color: "white", fontSize: 30 }}>Users Name</Text>
+          <Text style={{ color: "#7D8ABC", fontSize: 30, marginVertical: 15 }}>
+            Users Name
+          </Text>
 
           {/* Profile Edit and Logout Buttons */}
           <View
             style={{ flexDirection: "row", justifyContent: "space-evenly" }}
           >
             <TouchableOpacity style={styles.button} onPress={handleEdit}>
-              <Text style={{ color: "white" }}>Edit</Text>
+              <Text style={{ color: "#070945" }}>Edit</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button}>
-              <Text style={{ color: "white" }}>Logout</Text>
+              <Text style={{ color: "#070945" }}>Logout</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -210,10 +212,10 @@ const Profile = () => {
             />
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-                <Text style={{ color: "white" }}>Change</Text>
+                <Text style={{ color: "#070945" }}>Change</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.button} onPress={handleClose}>
-                <Text style={{ color: "white" }}>Close</Text>
+                <Text style={{ color: "#070945" }}>Close</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -240,7 +242,7 @@ const styles = StyleSheet.create({
     height: 40,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: "#536493",
+    backgroundColor: "#e9cdb3",
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: 10,
